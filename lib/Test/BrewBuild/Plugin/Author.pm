@@ -1,8 +1,11 @@
+use strict;
+use warnings;
+
 package Test::BrewBuild::Plugin::Author;
 
 # default exec command set plugin for Test::BrewBuild
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 $ENV{RELEASE_TESTING} = 1;
 
@@ -71,6 +74,10 @@ These installed distributions are:
     Pod::Coverage
     Test::Pod::Coverage
     Test::Manifest
+
+We also attempt to set C<$ENV{RELEASE} =1>. If we can't, and a log object is
+sent in, we'll log that the environment variable isn't set so author testing
+can't be performed.
 
 =head1 METHODS
 
