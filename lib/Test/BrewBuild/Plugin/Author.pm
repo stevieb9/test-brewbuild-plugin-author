@@ -101,4 +101,3 @@ cpanm Pod::Coverage
 cpanm Test::Pod::Coverage
 cpanm --installdeps .
 cpanm -v --test-only .
-shit
