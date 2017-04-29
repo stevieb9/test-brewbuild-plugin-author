@@ -1,4 +1,7 @@
 Revision history for Test-BrewBuild-Plugin-Author
 
-0.01 UNREL
+0.02    2017-04-28
+        - added $ENV{RELEASE_TESTING} = 1;
+
+0.01    2017-04-28
     - initial release

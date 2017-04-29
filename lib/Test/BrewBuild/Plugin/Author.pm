@@ -2,7 +2,9 @@ package Test::BrewBuild::Plugin::Author;
 
 # default exec command set plugin for Test::BrewBuild
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
+
+$ENV{RELEASE_TESTING} = 1;
 
 my $state = bless {}, __PACKAGE__;
 
