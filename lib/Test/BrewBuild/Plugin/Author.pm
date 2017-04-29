@@ -11,6 +11,19 @@ my $state = bless {}, __PACKAGE__;
 sub brewbuild_exec{
     shift; # throw away class
     my $log = shift;
+    
+    if ($log){
+        my $package_log = $log->child('Test::BrewBuild::Plugin::Author');
+        $package_log->_7("initializing plugin");
+
+        if (! $ENV{RELEASE_TESTING}){
+            $package_log->_0(
+                "RELEASE_TESTING env var not set... We'll install ".
+                "author packages, but won't run them"
+            );
+        }
+    }
+
     my $clog = $log->child( __PACKAGE__.'::brewbuild_exec' );
     $clog->_6( 'performing plugin duties' );
     return _cmd();
@@ -81,3 +94,4 @@ cpanm Pod::Coverage
 cpanm Test::Pod::Coverage
 cpanm --installdeps .
 cpanm -v --test-only .
+shit
