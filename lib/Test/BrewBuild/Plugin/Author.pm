@@ -57,6 +57,15 @@ These installed distributions are:
     Test::Pod::Coverage
     Test::Manifest
 
+=head1 METHODS
+
+=head2 brewbuild_exec($log)
+
+Is called by C<Test::BrewBuild::exec()>, executes the test commands provided
+by this plugin's C<DATA> section.
+
+Optionally takes a C<Test::BrewBuild::log()> object as a parameter.
+
 =head1 AUTHOR
 
 Steve Bertrand, C<< <steveb at cpan.org> >>
