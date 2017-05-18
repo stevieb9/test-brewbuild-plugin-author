@@ -3,7 +3,7 @@ use warnings;
 
 package Test::BrewBuild::Plugin::Author;
 
-# default exec command set plugin for Test::BrewBuild
+# default exec command set plugin for Test::BrewBuild with author testing
 
 our $VERSION = '0.03';
 
